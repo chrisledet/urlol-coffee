@@ -1,6 +1,6 @@
 URLol
 ========
-Bookmark app in [Coffeescript][coffeescript]. Uses jStorage for saving the bookmarks.
+Bookmark app in [Coffeescript][coffeescript]. Uses [jStorage][jstorage] for saving the bookmarks.
 
 Install
 ========
@@ -24,3 +24,4 @@ DO WHAT THE FUCK YOU WANT TO + BEER/PIZZA PUBLIC LICENSE
 [peepcode]:http://peepcode.com
 [peepcode-coffeescript]:http://peepcode.com/products/coffeescript
 [coffeescript]:http://jashkenas.github.com/coffee-script/
+[jstorage]:http://www.jstorage.info/
