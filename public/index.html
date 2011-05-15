@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>URLol</title>
+    <link rel="stylesheet" href="stylesheets/app.css">
+    <script src="javascripts/frameworks/handlebars-0.9.0.pre.5.js"></script>
+    <script src="javascripts/frameworks/jquery.js"></script>
+    <script src="javascripts/frameworks/jstorage.js"></script>
+    
+    <script src="javascripts/urlol.js" type="text/javascript" charset="utf-8"></script>
+    <script src="javascripts/app.js" type="text/javascript" charset="utf-8"></script>
+    
+  </head>
+  <body>
+
+    <script id="account-template" type="text/x-handlebars-template">
+    {{#each bookmarks}}
+      <li>
+        <span class="bookmark">
+          <a href='{{url}}'>{{title}}</a>
+          <a href='#' onclick='removeBookmark("{{title}}")'>[x]</a>
+        </span>
+      </li>
+    {{/each}}
+    </script>
+
+    <div id="wrap">
+    
+      <h1 id="title"><img src="images/yaolol.png" />URLol</h1>
+      <ul id="account"></ul>
+    
+      <form id="entry_form">
+        <input type="text" id="entry" />
+      </form>
+
+      <p class="note">
+        Example: <em class="note">Google http://google.com</em>
+      </p>
+    
+    </div>
+
+  </body>
+</html>

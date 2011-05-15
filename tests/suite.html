@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>URLol Tests</title>
+    <link rel="stylesheet" href="jasmine/jasmine.css">
+    
+    <!-- Test libraries -->
+    <script src="jasmine/jasmine.js"></script>
+    <script src="jasmine/jasmine-html.js"></script>
+    
+    <script src="../public/javascripts/urlol.js"></script>
+    <script src="urlol-spec.js"></script>
+  </head>
+
+  <body id="suite">
+    <script>
+      jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+      jasmine.getEnv().execute();
+    </script>
+  </body>
+</html>
