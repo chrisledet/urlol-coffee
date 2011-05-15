@@ -32,31 +32,16 @@
       bookmarks = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
       return (_ref = this.bookmarks).push.apply(_ref, bookmarks);
     };
-    Account.prototype.remove = function(title) {
-      var bookmark, i;
-      if ((function() {
-        var _len, _ref, _results;
-        _ref = this.bookmarks;
-        _results = [];
-        for (i = 0, _len = _ref.length; i < _len; i++) {
-          bookmark = _ref[i];
-          _results.push(title === bookmark.title);
-        }
-        return _results;
-      }).call(this)) {
-        return delete this.bookmarks[i];
-      }
-    };
     Account.prototype.toJSON = function() {
-      var bookmark;
+      var b;
       return {
         bookmarks: (function() {
           var _i, _len, _ref, _results;
           _ref = this.bookmarks;
           _results = [];
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            bookmark = _ref[_i];
-            _results.push(bookmark.toJSON());
+            b = _ref[_i];
+            _results.push(b.toJSON());
           }
           return _results;
         }).call(this)

@@ -16,3 +16,18 @@ describe "an invalid bookmark", ->
     @bookmark = new Bookmark "LOL GOOGLE"
     (expect @bookmark.title).toEqual ""
     (expect @bookmark.url).toEqual ""
+
+describe "account", ->
+  
+  beforeEach ->
+    @account = new Account
+    @google = new Bookmark "Google http://google.com"
+    @reddit = new Bookmark "Reddit http://reddit.com"
+  
+  it "should have one bookmark", ->
+    @account.add @google
+    (expect @account.bookmarks.length).toEqual 1
+    
+  it "should have two bookmarks", ->
+    @account.add @google, @reddit
+    (expect @account.bookmarks.length).toEqual 2

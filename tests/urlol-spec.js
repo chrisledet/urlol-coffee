@@ -22,4 +22,19 @@
       return (expect(this.bookmark.url)).toEqual("");
     });
   });
+  describe("account", function() {
+    beforeEach(function() {
+      this.account = new Account;
+      this.google = new Bookmark("Google http://google.com");
+      return this.reddit = new Bookmark("Reddit http://reddit.com");
+    });
+    it("should have one bookmark", function() {
+      this.account.add(this.google);
+      return (expect(this.account.bookmarks.length)).toEqual(1);
+    });
+    return it("should have two bookmarks", function() {
+      this.account.add(this.google, this.reddit);
+      return (expect(this.account.bookmarks.length)).toEqual(2);
+    });
+  });
 }).call(this);

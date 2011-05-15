@@ -20,9 +20,6 @@ window.Account = class Account
 
   add: (bookmarks...) -> 
     @bookmarks.push bookmarks...
-  
-  remove: (title) ->
-    delete @bookmarks[i] if title == bookmark.title for bookmark, i in @bookmarks
     
   toJSON: ->
-    bookmarks: bookmark.toJSON() for bookmark in @bookmarks
+    bookmarks: b.toJSON() for b in @bookmarks
