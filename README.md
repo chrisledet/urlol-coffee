@@ -1,6 +1,17 @@
 URLol
 ========
-Bookmark app in [Coffeescript][coffeescript]
+Bookmark app in [Coffeescript][coffeescript]. Uses jStorage for saving the bookmarks.
+
+Install
+========
+    git clone git://github.com/chrisledet/urlol.git
+    cd urlol
+    coffee -c javascripts tests
+    open index.html
+
+TODO
+========
+* Export to JSON
 
 Credit
 ========
