@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>URLol</title>
+    <title>URLol - Your Bookmarks</title>
     <link rel="stylesheet" href="stylesheets/app.css">
     <script src="javascripts/frameworks/handlebars-0.9.0.pre.5.js"></script>
     <script src="javascripts/frameworks/jquery.js"></script>
@@ -24,19 +24,36 @@
       </li>
     {{/each}}
     </script>
+    
+    <script id="json-template" type="text/x-handlebars-template">
+    {
+      "bookmarks":
+      [
+        {{#each bookmarks}}
+          { "title":"{{title}}","url":"{{url}}" },
+        {{/each}}
+      ]
+    }
+    </script>
+
+    <div id='json' style="display:none;"></div>
 
     <div id="wrap">
     
       <h1 id="title"><img src="images/yaolol.jpg" />URLol</h1>
+      
       <ul id="account"></ul>
     
       <form id="entry_form">
-        <input type="text" id="entry" />
+        <input type="text" id="entry" placeholder="Enter Label and URL" />
       </form>
 
       <p class="note">
-        Example: <em class="note">Google http://google.com</em>
+        Enter a bookmark with your label then url:<br />
+        (Example) <em class="note">Google http://google.com</em>
       </p>
+      
+      <a href='#' onClick='exportJSON()'>Export Bookmarks</a>
     
     </div>
 
