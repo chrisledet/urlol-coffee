@@ -1,6 +1,16 @@
 body {
   font-family: Helvetica, Calibri, Arial, sans-serif;
-  font-size: 14px; }
+  font-size: 14px; 
+  color: #000;
+}
+
+a {
+  color: #333;
+}
+
+a:visited {
+  color: #333;
+}
 
 #wrap {
   width: 480px;
@@ -13,7 +23,8 @@ h1 {
 ul {
   margin: 0;
   padding: 0;
-  border-top: 5px solid black; }
+  border-top: 2px solid black; 
+}
   ul li {
     padding-top: 7px;
     padding-bottom: 7px;
