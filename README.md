@@ -1,24 +1,24 @@
 URLol
 ========
-Bookmark app in [Coffeescript][coffeescript]. Uses [jStorage][jstorage] for saving the bookmarks.
+Bookmark app in [Coffeescript][coffeescript]. Uses [jStorage][jstorage] for saving the bookmarks. It makes use of HTML5 local storage and saves all your data there.
 
 Install
-========
+---
     git clone git://github.com/chrisledet/urlol.git
     cd urlol
     coffee -c javascripts tests
     open index.html
 
 TODO
-========
-* Export to JSON
+---
+* Export to different formats
 
 Credit
-========
-Used the starter code from [Peepcode's][peepcode] [Coffescript screencast][peepcode-coffeescript]. Very helpful.
+---
+Used some of the starter code from [Peepcode's][peepcode] [Coffescript screencast][peepcode-coffeescript]. Very helpful.
 
 License
-========
+---
 DO WHAT THE FUCK YOU WANT TO + BEER/PIZZA PUBLIC LICENSE
 
 [peepcode]:http://peepcode.com
