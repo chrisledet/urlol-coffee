@@ -2,7 +2,7 @@ URLol
 ========
 Bookmark app in Sinatra, flexing my [Coffeescript][coffeescript] skills. Uses [jStorage][jstorage] for saving the bookmarks. It makes use of HTML5 local storage and saves all your data there.
 
-Install
+Requirements
 ---
 * Ruby 1.8.7 or 1.9.2 with rubygems
 * CoffeeScript 1.1.1
