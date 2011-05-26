@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>URLol - Your Bookmarks</title>
+    <link rel="stylesheet" href="../stylesheets/app.css">
+    <script src="../javascripts/frameworks/handlebars-0.9.0.pre.5.js"></script>
+    <script src="../javascripts/frameworks/jquery.js"></script>
+    <script src="../javascripts/frameworks/jstorage.js"></script>
+    <!-- compiled coffeescript files -->
+    <script src="../javascripts/urlol.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../javascripts/app.js" type="text/javascript" charset="utf-8"></script>    
+  </head>
+  <body>
+
+  <script id="account-template" type="text/x-handlebars-template">
+  {{#each bookmarks}}
+    <li>
+      <span class="bookmark">
+        <a href='{{url}}'>{{title}}</a>
+        <a href='#' target='_blank' onclick='removeBookmark("{{title}}")'>[x]</a>
+      </span>
+    </li>
+  {{/each}}
+  </script>
+    
+  <script id="json-template" type="text/x-handlebars-template">
+  {
+    "bookmarks":
+    [
+      {{#each bookmarks}}
+        { "title":"{{title}}","url":"{{url}}" },
+      {{/each}}
+    ]
+  }
+  </script>
+
+  <div id='json' style="display:none;"></div>
+
+  <div id="wrap">
+  
+    <h1 id="title"><img src="../images/yaolol.jpg" />URLol</h1>
+    
+    <ul id="account"></ul>
+  
+    <form id="entry_form">
+      <input type="text" id="entry" placeholder="Enter Label and URL" />
+    </form>
+
+    <p class="note">
+      Enter a bookmark with your label then url:<br />
+      (Example) <em class="note">Google http://google.com</em>
+    </p>
+    
+    <a href='#' onClick='exportJSON()'>Export Bookmarks</a>
+  
+  </div>
+
+  </body>
+</html>
