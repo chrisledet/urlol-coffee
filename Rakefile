@@ -1,4 +1,4 @@
-namespace :urlol do
+namespace :coffee do
   
   desc "compile coffeescript files"
   task :compile do
@@ -6,10 +6,10 @@ namespace :urlol do
   end
   
   desc "compile and watch coffeescript files"
-  task :compile_and_watch do
+  task :watch do
     system 'coffee -wc javascripts tests'
   end
   
 end
 
-task :default => ["urlol:compile"]
+task :default => ["coffee:compile"]

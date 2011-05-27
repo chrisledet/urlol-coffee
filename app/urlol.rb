@@ -1,6 +1,6 @@
 require 'sinatra'
 
-module URLOL
+module URLol
   class App < Sinatra::Base
     
     dir = File.dirname(File.expand_path(__FILE__))
